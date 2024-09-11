@@ -1,0 +1,14 @@
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.com/people/7d8c0f7d-b25c-4a46-bfeb-73fe75e58989>
+        a foaf:Person;
+        mu:uuid "7d8c0f7d-b25c-4a46-bfeb-73fe75e58989";
+        foaf:age 50 ;
+        foaf:name "Frodo Baggins".
+
+<http://example.com/people/d5f05f05-e22e-4073-9fd7-5af685e38335>
+        a foaf:Person;
+        mu:uuid "d5f05f05-e22e-4073-9fd7-5af685e38335";
+        foaf:age 110 ;
+        foaf:name "Bilbo Baggins".
