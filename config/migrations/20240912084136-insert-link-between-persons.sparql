@@ -1,0 +1,8 @@
+INSERT DATA {
+   GRAPH <http://mu.semte.ch/graphs/public> {
+     <http://example.com/people/7d8c0f7d-b25c-4a46-bfeb-73fe75e58989>
+       <http://xmlns.com/foaf/0.1/knows>
+       <http://example.com/people/d5f05f05-e22e-4073-9fd7-5af685e38335>.
+   }
+
+}
