@@ -1,7 +1,11 @@
 {
   "version": "0.1",
   "prefixes": {
-    "foaf": "http://xmlns.com/foaf/0.1/"
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "obj": "https://inventaris.onroerenderfgoed.be/aanduidingsobjecten",
+    "ex": "https://inventaris.onroerenderfgoed.be/"
   },
   "resources": {
     "person": {
@@ -27,6 +31,41 @@
         "include-uri"
       ],
       "new-resource-base": "http://data.lblod.info/id/person/"
+    },
+    "aanduidingsobject": {
+      "class": "ex:Aanduidingsobject",
+      "attributes": {
+        "type": { "type": "string", "predicate": "ex:type" },
+        "naam": { "type": "string", "predicate": "foaf:name" },
+        "description": { "type": "string", "predicate": "dcterms:description" },
+        "identifier": { "type": "string", "predicate": "dcterms:identifier" },
+        "locatie": { "type": "string", "predicate": "dcterms:spatial" },
+        "personen": { "type": "string", "predicate": "foaf:Person" },
+
+        "provincie": { "type": "string", "predicate": "ex:provincie" },
+        "gemeente": { "type": "string", "predicate": "ex:gemeente" },
+        "deelgemeente": { "type": "string", "predicate": "ex:deelgemeente" },
+        "nummers": { "type": "string", "predicate": "ex:nummers" },
+        "stijl": { "type": "string", "predicate": "ex:stijl" },
+        "typologie": { "type": "string", "predicate": "ex:typologie" },
+        "context": { "type": "string", "predicate": "ex:context" },
+        "materiaal": { "type": "string", "predicate": "ex:materiaal" },
+        "plantensoort": { "type": "string", "predicate": "ex:plantensoort" },
+        "datering": { "type": "string", "predicate": "ex:datering" },
+        "gga_motivatie": { "type": "string", "predicate": "ex:gga_motivatie" },
+        "themas": { "type": "string", "predicate": "ex:themas" },
+
+        "valid_date": { "type": "string", "predicate": "dcterms:valid" },
+        "issued_date": { "type": "string", "predicate": "dcterms:issued" },
+        "comment": { "type": "string", "predicate": "rdfs:comment" },
+        "besluiten_identifier": { "type": "string", "predicate": "ex:besluiten_identifier" },
+
+        "dataverantwoordelijke": { "type": "string", "predicate": "ex:dataverantwoordelijke" },
+        "toelatingsplichtige_handelingen": { "type": "string", "predicate": "ex:toelatingsplichtige_handelingen" }
+      },
+      "relationships": [],
+      "features": ["include-uri"],
+      "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
     }
   }
 }
