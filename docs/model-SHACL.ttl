@@ -1,0 +1,231 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://inventaris.onroerenderfgoed.be/#> .
+
+#########################
+# Aanvrager Shape
+#########################
+
+ex:AanvragerShape
+    a sh:NodeShape ;
+    sh:targetClass ex:aanvrager ;
+    sh:property [
+        sh:path ex:voornaam ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:achternaam ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:rijksregisternummer ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;   
+    ] ;
+    sh:property [
+        sh:path ex:straat ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:postnummer ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:gemeente ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:telefoon ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:email ;
+        sh:datatype xsd:string ;
+        sh:pattern "^\\S+@\\S+\\.\\S+$" ;  
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:functieInOrganisatie ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:organisatie ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;    
+    ] .
+
+#########################
+# Contactpersoon Shape
+#########################
+
+ex:ContactpersoonShape
+    a sh:NodeShape ;
+    sh:targetClass ex:contactpersoon ;
+    sh:property [
+        sh:path ex:voornaam ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:achternaam ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:straat ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:postnummer ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:gemeente ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:telefoon ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:email ;
+        sh:datatype xsd:string ;
+        sh:pattern "^\\S+@\\S+\\.\\S+$" ;  
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] .
+
+#########################
+# Aanduidingsobject Shape
+#########################
+
+ex:AanduidingsobjectShape
+    a sh:NodeShape ;
+    sh:targetClass ex:aanduidingsobject ;
+    sh:property [
+        sh:path ex:naam ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:straat ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:postnummer ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:gemeente ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:kadastraleAfdeling ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] ;
+    sh:property [
+        sh:path ex:kadastraleSectie ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 0 ;   
+
+    ] ;
+    sh:property [
+        sh:path ex:kadastraalNummer ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;     
+    ] .
+
+#########################
+# Aanvraag Shape
+#########################
+
+ex:AanvraagShape
+    a sh:NodeShape ;
+    sh:targetClass ex:aanvraag ;
+    sh:property [
+        sh:path ex:detailsAanduidingsobject ;
+        sh:node ex:AanduidingsobjectShape ; 
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] ;
+        sh:property [
+        sh:path ex:aanvrager ;
+        sh:node ex:AanvragerShape ;  
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;   
+    ] ;
+        sh:property [
+        sh:path ex:contactpersoon ;
+        sh:node ex:ContactpersoonShape ;  
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;   
+    ] ;
+    sh:property [
+        sh:path ex:beschrijvingHandeling ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;   
+    ] ;
+    sh:property [
+        sh:path ex:beschrijvingHuidigeStaat ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:motivatie ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:startDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] ;
+    sh:property [
+        sh:path ex:endDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ;    
+    ] .
+
+
