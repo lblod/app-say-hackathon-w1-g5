@@ -25,6 +25,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/person/"
   end
 
+  match "/sparql/*path" do
+    Proxy.forward conn, path, "http://triplestore:8890/sparql/"
+  end
+
   match "/*path", @html do
     Proxy.forward conn, path, "http://frontend/"
   end
