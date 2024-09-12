@@ -6,6 +6,7 @@ from rdflib.namespace import SKOS, DCTERMS, FOAF, XSD, RDFS
 import re
 import uuid
 import math
+from datetime import datetime
 
 #collect the csv data
 file_path = 'scripts/aanduidingsobjecten.csv'
@@ -90,4 +91,5 @@ for index, row in df.iterrows():
     if is_valid_value(row.get('toelatingsplichtige handelingen', 'unknown')):
         g.add((uri, EX.toelatingsplichtige_handelingen, Literal(row['toelatingsplichtige handelingen'])))
 
-g.serialize(destination='scripts/aanduidingsobjecten.ttl')
+
+g.serialize(destination=f'scripts/{datetime.now().strftime("%Y%m%d%H%M%S")}-aanduidingsobjecten.ttl')
