@@ -22,11 +22,11 @@ defmodule Dispatcher do
   # this file.
 
   match "/people/*path" do
-    forward conn, path, "http://resource/person/"
+    Proxy.forward conn, path, "http://resource/person/"
+  end
 
   match "/*path", @html do
     Proxy.forward conn, path, "http://frontend/"
-    
   end
 
   match "/*_", %{ layer: :not_found } do
