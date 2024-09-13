@@ -33,6 +33,18 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/aanduidingsobject/"
   end
 
+  match "/aanvraag/*path" do
+    Proxy.forward conn, path, "http://resource/aanvraag/"
+  end
+
+  match "/aanvrager/*path" do
+    Proxy.forward conn, path, "http://resource/aanvrager/"
+  end
+
+  match "/contactpersoon/*path" do
+    Proxy.forward conn, path, "http://resource/contactpersoon/"
+  end
+
   match "/*path", @html do
     Proxy.forward conn, path, "http://frontend/"
   end
