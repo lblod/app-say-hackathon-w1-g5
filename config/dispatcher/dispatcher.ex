@@ -45,10 +45,9 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/contactpersoon/"
   end
 
-  match "/besluit/*path" do
-    Proxy.forward conn, path, "http://resource/besluit/"
+  match "/besluiten/*path" do
+    Proxy.forward conn, path, "http://resource/besluiten/"
   end
-
 
   match "/*path", @html do
     Proxy.forward conn, path, "http://frontend/"
