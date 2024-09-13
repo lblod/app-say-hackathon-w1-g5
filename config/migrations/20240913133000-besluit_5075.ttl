@@ -79,7 +79,7 @@ blank:9 a ns1:Aanduidingsobject ;
     dcterms:title "5075.pdf" ;
     dcterms:type blank:10 .
 
-"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" a ns3:Issue ;
+<http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19> a ns3:Issue ;
     dcterms:isPartOf blank:6 ;
     dcterms:issued "2012-12-19"^^xsd:date ;
     ns3:issue 400 ;
