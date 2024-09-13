@@ -1,0 +1,87 @@
+@prefix at: <https://id.erfgoed.net/thesauri/aanduidingstypes/> .
+@prefix blank: <https://example.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix ns2: <http://www.w3.org/ns/prov/> .
+@prefix ns3: <http://purl.org/ontology/bibo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/5075> a <http://data.vlaanderen.be/ns/besluit#Besluit>,
+        ns1:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/5075/bestanden/13402> ;
+    dcterms:identifier 5075 ;
+    dcterms:publisher blank:3 ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" ;
+    dcterms:spatial blank:1,
+        blank:2 ;
+    dcterms:title "Vedetten van de Rijnvloot, P902 LIBERATION, P901 LEIE, P904 SAMBRE" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote blank:0,
+        blank:4,
+        blank:5 ;
+    skos:editorialNote ""@nl ;
+    ns1:besluit_handeltOver blank:9 ;
+    ns1:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/9> ;
+    ns1:dateSigned "2012-11-19"^^xsd:date ;
+    ns1:follows <https://id.erfgoed.net/besluiten/10883> ;
+    ns1:precedes <https://id.erfgoed.net/besluiten/14941> ;
+    ns1:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/13> .
+
+blank:0 a ns2:Modify ;
+    ns2:startedAtTime "2020-07-23T10:09:12.662730+02:00"^^xsd:dateTime ;
+    ns2:wasAssociatedWith "https://id.erfgoed.net/actoren/2163" .
+
+blank:1 a skos:Concept ;
+    dcterms:identifier 20001 ;
+    skos:prefLabel "Vlaams-Brabant"@nl .
+
+blank:10 dcterms:identifier 1 ;
+    dcterms:title "Besluit" .
+
+blank:2 a skos:Concept ;
+    dcterms:identifier 30000 ;
+    skos:prefLabel "West-Vlaanderen"@nl .
+
+blank:3 a foaf:Person ;
+    dcterms:identifier "4" ;
+    foaf:name "Bourgeois, Geert"@und .
+
+blank:4 a ns2:Create ;
+    ns2:startedAtTime "2013-09-30T12:52:20.963501+02:00"^^xsd:dateTime ;
+    ns2:wasAssociatedWith "https://id.erfgoed.net/actoren/1763" .
+
+blank:5 a ns2:Publish ;
+    ns2:startedAtTime "2016-05-26T15:30:48.711702+02:00"^^xsd:dateTime ;
+    ns2:wasAssociatedWith "https://id.erfgoed.net/actoren/1163" .
+
+blank:6 a ns3:Periodical ;
+    dcterms:title "Belgisch Staatsblad"@nl .
+
+blank:7 a dcterms:MediaType ;
+    rdf:value "application/pdf" .
+
+blank:8 a dcterms:SizeOrDuration ;
+    rdfs:label "812631 B" ;
+    rdf:value 812631 .
+
+blank:9 a ns1:Aanduidingsobject ;
+    ns1:aanduid_aanduidingstype at:5 .
+
+<https://id.erfgoed.net/besluiten/5075/bestanden/13402> a ns3:LegalDocument,
+        ns1:Attachment ;
+    dcterms:extent blank:8 ;
+    dcterms:format blank:7 ;
+    dcterms:title "5075.pdf" ;
+    dcterms:type blank:10 .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" a ns3:Issue ;
+    dcterms:isPartOf blank:6 ;
+    dcterms:issued "2012-12-19"^^xsd:date ;
+    ns3:issue 400 ;
+    ns3:volume 182 .
+
