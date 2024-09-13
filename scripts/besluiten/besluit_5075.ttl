@@ -55,7 +55,7 @@
     dcterms:type [ dcterms:identifier 1 ;
             dcterms:title "Besluit" ] .
 
-"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" a bibo:Issue ;
+<http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19> a bibo:Issue ;
     dcterms:isPartOf [ a bibo:Periodical ;
             dcterms:title "Belgisch Staatsblad"@nl ] ;
     dcterms:issued "2012-12-19"^^xsd:date ;
