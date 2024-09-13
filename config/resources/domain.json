@@ -76,7 +76,7 @@
         "endDate": { "type": "string", "predicate": "ex:endDate" },
         "detailsAanduidingsobject": { "type": "string", "predicate": "ex:detailsAanduidingsobject" },
         "aanvrager": { "type": "string", "predicate": "ex:aanvrager" },
-        "contactpersoon": { "type": "string", "predicate": "ex:contactpersoon" },
+        "contactpersoon": { "type": "string", "predicate": "ex:contactpersoon" }
       },
       "relationships": [],
       "features": ["include-uri"],
@@ -112,6 +112,6 @@
       "relationships": [],
       "features": ["include-uri"],
       "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
-    },
+    }
   }
 }
