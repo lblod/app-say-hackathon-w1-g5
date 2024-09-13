@@ -31,6 +31,8 @@ def is_valid_value(value):
 
 MU = Namespace('http://mu.semte.ch/vocabularies/core/')
 EX = Namespace('https://inventaris.onroerenderfgoed.be/')
+SKOS = Namespace('http://www.w3.org/2004/02/skos/core#')
+
 
 g = rdf.Graph()
 g.bind('mu', MU)
@@ -39,6 +41,10 @@ g.bind('foaf', FOAF)
 g.bind('dcterms', DCTERMS)
 g.bind('rdfs', RDFS)
 g.bind('xsd', XSD)
+g.bind('skos', SKOS)
+
+# Add skos:inScheme URI
+concept_scheme_uri = URIRef("https://inventaris.onroerenderfgoed.be/conceptscheme/aanduidingsobjecten")
 
 # Iterate over each row in the DataFrame and convert to Turtle
 for index, row in df.iterrows():
@@ -53,9 +59,13 @@ for index, row in df.iterrows():
     naam = row.get('naam', 'unknown')  # Replace 'unknown' with a default value if 'naam' is missing
 
     g.add((uri, RDF.type, EX.Aanduidingsobject))
+    g.add((uri, RDF.type, SKOS.Concept))
     g.add((uri, EX.type, Literal(row['type'])))
     g.add((uri, MU.uuid, Literal(random_uuid)))
     g.add((uri, DCTERMS.identifier, Literal(row['id'])))
+
+    # Add skos:inScheme
+    g.add((uri, SKOS.inScheme, concept_scheme_uri))
 
     # Only write fields if they are valid (not NaN or "unknown")
     if is_valid_value(naam):
@@ -66,6 +76,9 @@ for index, row in df.iterrows():
         g.add((uri, FOAF.Person, Literal(row['personen'])))
     if is_valid_value(row.get('gebeurtenissen', 'unknown')):
         g.add((uri, DCTERMS.description, Literal(row['gebeurtenissen'])))
+        
+        # Add skos:prefLabel
+        g.add((uri, SKOS.prefLabel, Literal(row['gebeurtenissen'])))
  
     for pred in ['provincie', 'gemeente', 'deelgemeente', 'nummers', 'stijl',
                  'typologie', 'context', 'materiaal', 'plantensoort',
