@@ -53,19 +53,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10260> a ex:Aanduidingsobject ;
-    mu:uuid "698c9dd1-204d-4769-899c-99412ff68cae" ;
-    dcterms:description "Inventarisatie Demer- en Laakvallei tussen Aarschot en Werchter" ;
-    dcterms:identifier 10260 ;
-    dcterms:issued "2014-02-04"^^xsd:date ;
-    dcterms:spatial "Aarschot, Gelrode (Aarschot), Betekom (Begijnendijk), Rotselaar, Werchter (Rotselaar), Tremelo (Tremelo)" ;
-    foaf:name "Demer- en Laakvallei tussen Aarschot en Werchter" ;
-    ex:besluiten_identifier "5333" ;
-    ex:dataverantwoordelijke "Agentschap Onroerend Erfgoed" ;
-    ex:deelgemeente "Aarschot, Betekom, Gelrode, Rotselaar, Tremelo, Werchter" ;
-    ex:gemeente "Aarschot, Begijnendijk, Rotselaar, Tremelo" ;
-    ex:nummers "4.05/20000/185.1" ;
-    ex:provincie "Vlaams-Brabant" ;
-    ex:toelatingsplichtige_handelingen "nee" ;
-    ex:type "Vastgesteld landschapsatlasrelict" ;
-    ex:typologie "agrarische landschappen, dijken, donken, heiden, hoeven, kapellen (klein erfgoed), landhuizen, loofbossen, meanders, microreliëfvormen, open landschappen, restheuvels, rivieren, valleien" .
+# <https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10260> a ex:Aanduidingsobject ;
+#     mu:uuid "698c9dd1-204d-4769-899c-99412ff68cae" ;
+#     dcterms:description "Inventarisatie Demer- en Laakvallei tussen Aarschot en Werchter" ;
+#     dcterms:identifier 10260 ;
+#     dcterms:issued "2014-02-04"^^xsd:date ;
+#     dcterms:spatial "Aarschot, Gelrode (Aarschot), Betekom (Begijnendijk), Rotselaar, Werchter (Rotselaar), Tremelo (Tremelo)" ;
+#     foaf:name "Demer- en Laakvallei tussen Aarschot en Werchter" ;
+#     ex:besluiten_identifier "5333" ;
+#     ex:dataverantwoordelijke "Agentschap Onroerend Erfgoed" ;
+#     ex:deelgemeente "Aarschot, Betekom, Gelrode, Rotselaar, Tremelo, Werchter" ;
+#     ex:gemeente "Aarschot, Begijnendijk, Rotselaar, Tremelo" ;
+#     ex:nummers "4.05/20000/185.1" ;
+#     ex:provincie "Vlaams-Brabant" ;
+#     ex:toelatingsplichtige_handelingen "nee" ;
+#     ex:type "Vastgesteld landschapsatlasrelict" ;
+#     ex:typologie "agrarische landschappen, dijken, donken, heiden, hoeven, kapellen (klein erfgoed), landhuizen, loofbossen, meanders, microreliëfvormen, open landschappen, restheuvels, rivieren, valleien" .
