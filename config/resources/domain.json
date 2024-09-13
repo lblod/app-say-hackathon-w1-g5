@@ -86,14 +86,26 @@
     "aanduidingsobject1": {
       "class": "ex:aanduidingsobject",
       "attributes": {
+        "naam": { "type": "string", "predicate": "ex:naam" },
+        "straat": { "type": "string", "predicate": "ex:straat" },
+        "postnummer": { "type": "string", "predicate": "ex:postnummer" },
+        "gemeente": { "type": "string", "predicate": "ex:gemeente" }
       },
       "relationships": [],
       "features": ["include-uri"],
       "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
     },
     "aanvrager": {
-      "class": "ex:aanvraager",
+      "class": "ex:aanvrager",
       "attributes": {
+        "voornaam": { "type": "string", "predicate": "ex:voornaam" },
+        "achternaam": { "type": "string", "predicate": "ex:achternaam" },
+        "rijksregisternummer": { "type": "string", "predicate": "ex:rijksregisternummer" },
+        "straat": { "type": "string", "predicate": "ex:straat" },
+        "postnummer": { "type": "string", "predicate": "ex:postnummer" },
+        "gemeente": { "type": "string", "predicate": "ex:gemeente" },
+        "telefoon": { "type": "string", "predicate": "ex:telefoon" },
+        "email": { "type": "string", "predicate": "ex:email" }
       },
       "relationships": [],
       "features": ["include-uri"],
@@ -102,6 +114,13 @@
     "contactpersoon": {
       "class": "ex:contactpersoon",
       "attributes": {
+        "voornaam": { "type": "string", "predicate": "ex:voornaam" },
+        "achternaam": { "type": "string", "predicate": "ex:achternaam" },
+        "straat": { "type": "string", "predicate": "ex:straat" },
+        "postnummer": { "type": "string", "predicate": "ex:postnummer" },
+        "gemeente": { "type": "string", "predicate": "ex:gemeente" },
+        "telefoon": { "type": "string", "predicate": "ex:telefoon" },
+        "email": { "type": "string", "predicate": "ex:email" }
       },
       "relationships": [],
       "features": ["include-uri"],
