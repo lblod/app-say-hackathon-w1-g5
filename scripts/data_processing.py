@@ -34,6 +34,7 @@ EX = Namespace('https://inventaris.onroerenderfgoed.be/')
 
 g = rdf.Graph()
 g.bind('mu', MU)
+g.bind('ex', EX)
 g.bind('foaf', FOAF)
 g.bind('dcterms', DCTERMS)
 g.bind('rdfs', RDFS)
