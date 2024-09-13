@@ -89,7 +89,10 @@
         "naam": { "type": "string", "predicate": "ex:naam" },
         "straat": { "type": "string", "predicate": "ex:straat" },
         "postnummer": { "type": "string", "predicate": "ex:postnummer" },
-        "gemeente": { "type": "string", "predicate": "ex:gemeente" }
+        "gemeente": { "type": "string", "predicate": "ex:gemeente" },
+        "kadastraleAfdeling": { "type": "string", "predicate": "ex:kadastraleAfdeling" },
+        "kadastraleSectie": { "type": "string", "predicate": "ex:kadastraleSectie" },
+        "kadastraalNummer": { "type": "string", "predicate": "ex:kadastraalNummer" }
       },
       "relationships": [],
       "features": ["include-uri"],
