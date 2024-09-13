@@ -1,9 +1,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix ex: <https://inventaris.onroerenderfgoed.be/>.
-
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
 
     # Insert an Aanvraag instance
     ex:Aanvraag1 a ex:aanvraag ;
+        mu:uuid "535d4386-1e42-4686-afbf-f873ac8b9670";
         ex:beschrijvingHandeling "waterleiding vernieuwen in de vloer"^^xsd:string ;
         ex:beschrijvingHuidigeStaat "waterleiding lekt en tast de vloer en muren aan"^^xsd:string ;
         ex:motivatie "Om verder schade tegen te gaan moet de oude waterleiding vervangen worden"^^xsd:string ;
@@ -13,18 +14,9 @@
         ex:aanvrager ex:Aanvrager1 ;
         ex:contactpersoon ex:Contactpersoon1 .
 
-    # Insert an Aanduidingsobject instance
-    # ex:Aanduidingsobject1 a ex:aanduidingsobject ;
-    #     ex:naam "Modernistische woning Douchar"^^xsd:string ;
-    #     ex:straat "Koningin Astridlaan 67"^^xsd:string ;
-    #     ex:postnummer "3500"^^xsd:string ;
-    #     ex:gemeente "Hasselt"^^xsd:string ;
-    #     ex:kadastraleAfdeling "1111"^^xsd:string ;
-    #     ex:kadastraleSectie "B"^^xsd:string ;
-    #     ex:kadastraalNummer "0001"^^xsd:string .
-
     # Insert an Aanvrager instance
     ex:Aanvrager1 a ex:aanvrager ;
+        mu:uuid "535d4386-1e42-4686-afbf-foo";
         ex:voornaam "Peter"^^xsd:string ;
         ex:achternaam "Janssens"^^xsd:string ;
         ex:rijksregisternummer "32145678"^^xsd:string ;
@@ -37,6 +29,7 @@
 
     # Insert a Contactpersoon instance
     ex:Contactpersoon1 a ex:contactpersoon ;
+        mu:uuid "535d4386-1e42-4686-afbf-bar";
         ex:voornaam "Marie"^^xsd:string ;
         ex:achternaam "Servais"^^xsd:string ;
         ex:straat "Buergerstraat 6"^^xsd:string ;
