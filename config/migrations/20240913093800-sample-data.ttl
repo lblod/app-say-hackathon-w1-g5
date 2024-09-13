@@ -14,14 +14,14 @@
         ex:contactpersoon ex:Contactpersoon1 .
 
     # Insert an Aanduidingsobject instance
-    ex:Aanduidingsobject1 a ex:aanduidingsobject ;
-        ex:naam "Modernistische woning Douchar"^^xsd:string ;
-        ex:straat "Koningin Astridlaan 67"^^xsd:string ;
-        ex:postnummer "3500"^^xsd:string ;
-        ex:gemeente "Hasselt"^^xsd:string ;
-        ex:kadastraleAfdeling "1111"^^xsd:string ;
-        ex:kadastraleSectie "B"^^xsd:string ;
-        ex:kadastraalNummer "0001"^^xsd:string .
+    # ex:Aanduidingsobject1 a ex:aanduidingsobject ;
+    #     ex:naam "Modernistische woning Douchar"^^xsd:string ;
+    #     ex:straat "Koningin Astridlaan 67"^^xsd:string ;
+    #     ex:postnummer "3500"^^xsd:string ;
+    #     ex:gemeente "Hasselt"^^xsd:string ;
+    #     ex:kadastraleAfdeling "1111"^^xsd:string ;
+    #     ex:kadastraleSectie "B"^^xsd:string ;
+    #     ex:kadastraalNummer "0001"^^xsd:string .
 
     # Insert an Aanvrager instance
     ex:Aanvrager1 a ex:aanvrager ;
@@ -49,23 +49,23 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix mu: <http://mu.semte.ch/vocabularies/core/> .
-@prefix ns1: <https://inventaris.onroerenderfgoed.be/> .
+@prefix ex: <https://inventaris.onroerenderfgoed.be/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10260> a ns1:Aanduidingsobject ;
+<https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10260> a ex:Aanduidingsobject ;
     mu:uuid "698c9dd1-204d-4769-899c-99412ff68cae" ;
     dcterms:description "Inventarisatie Demer- en Laakvallei tussen Aarschot en Werchter" ;
     dcterms:identifier 10260 ;
     dcterms:issued "2014-02-04"^^xsd:date ;
     dcterms:spatial "Aarschot, Gelrode (Aarschot), Betekom (Begijnendijk), Rotselaar, Werchter (Rotselaar), Tremelo (Tremelo)" ;
     foaf:name "Demer- en Laakvallei tussen Aarschot en Werchter" ;
-    ns1:besluiten_identifier "5333" ;
-    ns1:dataverantwoordelijke "Agentschap Onroerend Erfgoed" ;
-    ns1:deelgemeente "Aarschot, Betekom, Gelrode, Rotselaar, Tremelo, Werchter" ;
-    ns1:gemeente "Aarschot, Begijnendijk, Rotselaar, Tremelo" ;
-    ns1:nummers "4.05/20000/185.1" ;
-    ns1:provincie "Vlaams-Brabant" ;
-    ns1:toelatingsplichtige_handelingen "nee" ;
-    ns1:type "Vastgesteld landschapsatlasrelict" ;
-    ns1:typologie "agrarische landschappen, dijken, donken, heiden, hoeven, kapellen (klein erfgoed), landhuizen, loofbossen, meanders, microreliëfvormen, open landschappen, restheuvels, rivieren, valleien" .
+    ex:besluiten_identifier "5333" ;
+    ex:dataverantwoordelijke "Agentschap Onroerend Erfgoed" ;
+    ex:deelgemeente "Aarschot, Betekom, Gelrode, Rotselaar, Tremelo, Werchter" ;
+    ex:gemeente "Aarschot, Begijnendijk, Rotselaar, Tremelo" ;
+    ex:nummers "4.05/20000/185.1" ;
+    ex:provincie "Vlaams-Brabant" ;
+    ex:toelatingsplichtige_handelingen "nee" ;
+    ex:type "Vastgesteld landschapsatlasrelict" ;
+    ex:typologie "agrarische landschappen, dijken, donken, heiden, hoeven, kapellen (klein erfgoed), landhuizen, loofbossen, meanders, microreliëfvormen, open landschappen, restheuvels, rivieren, valleien" .

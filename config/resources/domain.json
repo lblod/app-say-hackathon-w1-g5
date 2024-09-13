@@ -4,7 +4,6 @@
     "foaf": "http://xmlns.com/foaf/0.1/",
     "dcterms": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "obj": "https://inventaris.onroerenderfgoed.be/aanduidingsobjecten",
     "ex": "https://inventaris.onroerenderfgoed.be/"
   },
   "resources": {
@@ -78,21 +77,6 @@
         "detailsAanduidingsobject": { "type": "string", "predicate": "ex:detailsAanduidingsobject" },
         "aanvrager": { "type": "string", "predicate": "ex:aanvrager" },
         "contactpersoon": { "type": "string", "predicate": "ex:contactpersoon" },
-      },
-      "relationships": [],
-      "features": ["include-uri"],
-      "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
-    },
-    "aanduidingsobject1": {
-      "class": "ex:aanduidingsobject",
-      "attributes": {
-        "naam": { "type": "string", "predicate": "ex:naam" },
-        "straat": { "type": "string", "predicate": "ex:straat" },
-        "postnummer": { "type": "string", "predicate": "ex:postnummer" },
-        "gemeente": { "type": "string", "predicate": "ex:gemeente" },
-        "kadastraleAfdeling": { "type": "string", "predicate": "ex:kadastraleAfdeling" },
-        "kadastraleSectie": { "type": "string", "predicate": "ex:kadastraleSectie" },
-        "kadastraalNummer": { "type": "string", "predicate": "ex:kadastraalNummer" }
       },
       "relationships": [],
       "features": ["include-uri"],
