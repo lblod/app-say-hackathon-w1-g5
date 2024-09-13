@@ -1,0 +1,86 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oe: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix oslo: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/14870> a oslo:Besluit,
+        oe:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/14870/bestanden/28968>,
+        <https://id.erfgoed.net/besluiten/14870/bestanden/28969> ;
+    dcterms:identifier 14870 ;
+    dcterms:publisher [ a foaf:Person ;
+            dcterms:identifier "64" ;
+            foaf:name "Vanblaere, Sonja"@und ] ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2019-11-19" ;
+    dcterms:spatial [ a skos:Concept ;
+            dcterms:identifier 70000 ;
+            skos:prefLabel "Limburg"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 20001 ;
+            skos:prefLabel "Vlaams-Brabant"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 40000 ;
+            skos:prefLabel "Oost-Vlaanderen"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 30000 ;
+            skos:prefLabel "West-Vlaanderen"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 10000 ;
+            skos:prefLabel "Antwerpen"@nl ] ;
+    dcterms:title "Kaart gebieden waar geen archeologie te verwachten valt" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote [ a prov1:Create ;
+            prov1:startedAtTime "2019-11-06T15:14:49.586613+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ],
+        [ a prov1:Modify ;
+            prov1:startedAtTime "2020-10-14T10:55:41.654102+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ],
+        [ a prov1:Publish ;
+            prov1:startedAtTime "2019-11-25T10:24:41.710024+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ] ;
+    skos:editorialNote "gga; gga12; datum inwerkingtreding 25 november 2019"@nl ;
+    oe:besluit_handeltOver [ a oe:Aanduidingsobject ;
+            oe:aanduid_aanduidingstype <https://id.erfgoed.net/thesauri/aanduidingstypes/21> ] ;
+    oe:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/89> ;
+    oe:dateSigned "2019-11-12"^^xsd:date ;
+    oe:follows <https://id.erfgoed.net/besluiten/14765> ;
+    oe:precedes <https://id.erfgoed.net/besluiten/14937> ;
+    oe:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/15>,
+        <https://id.erfgoed.net/thesauri/besluittypes/88> .
+
+<https://id.erfgoed.net/besluiten/14870/bestanden/28968> a bibo:LegalDocument,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "446130 B" ;
+            rdf:value 446130 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "BesluitAG_20191112.pdf" ;
+    dcterms:type [ dcterms:identifier 1 ;
+            dcterms:title "Besluit" ] .
+
+<https://id.erfgoed.net/besluiten/14870/bestanden/28969> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "5419747 B" ;
+            rdf:value 5419747 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/x-zip-compressed" ] ;
+    dcterms:title "GGA12.zip" ;
+    dcterms:type [ dcterms:identifier 2 ;
+            dcterms:title "Plan" ] .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2019-11-19" a bibo:Issue ;
+    dcterms:isPartOf [ a bibo:Periodical ;
+            dcterms:title "Belgisch Staatsblad"@nl ] ;
+    dcterms:issued "2019-11-19"^^xsd:date ;
+    bibo:issue 256 ;
+    bibo:volume 189 .
+

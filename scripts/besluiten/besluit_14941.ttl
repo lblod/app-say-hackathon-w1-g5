@@ -1,0 +1,82 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oe: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix oslo: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/14941> a oslo:Besluit,
+        oe:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/14941/bestanden/30236>,
+        <https://id.erfgoed.net/besluiten/14941/bestanden/30237>,
+        <https://id.erfgoed.net/besluiten/14941/bestanden/30240> ;
+    dcterms:identifier 14941 ;
+    dcterms:publisher [ a foaf:Person ;
+            dcterms:identifier "66" ;
+            foaf:name "Diependaele, Matthias"@und ] ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2020-08-19" ;
+    dcterms:title "Rijnvedette P904 Sambre" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote [ a prov1:Modify ;
+            prov1:startedAtTime "2021-01-05T15:32:02.223400+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ],
+        [ a prov1:Create ;
+            prov1:startedAtTime "2020-07-23T10:09:12.602253+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2163" ],
+        [ a prov1:Publish ;
+            prov1:startedAtTime "2020-07-23T10:51:27.266744+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ] ;
+    skos:editorialNote "gedeeltelijke opheffing oorspronkelijk besluit"@nl ;
+    oe:besluit_handeltOver [ a oe:Aanduidingsobject ;
+            oe:aanduid_aanduidingstype <https://id.erfgoed.net/thesauri/aanduidingstypes/5> ] ;
+    oe:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/9> ;
+    oe:dateSigned "2020-07-13"^^xsd:date ;
+    oe:follows <https://id.erfgoed.net/besluiten/5075> ;
+    oe:precedes <https://id.erfgoed.net/besluiten/14951> ;
+    oe:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/87> .
+
+<https://id.erfgoed.net/besluiten/14941/bestanden/30236> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "219389 B" ;
+            rdf:value 219389 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_voorlopheffing_20200713_behandelingadviezen.pdf" ;
+    dcterms:type [ dcterms:identifier 3 ;
+            dcterms:title "Bijlage" ] .
+
+<https://id.erfgoed.net/besluiten/14941/bestanden/30237> a bibo:LegalDocument,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "220446 B" ;
+            rdf:value 220446 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_voorlopheffing_20200713_mb.pdf" ;
+    dcterms:type [ dcterms:identifier 1 ;
+            dcterms:title "Besluit" ] .
+
+<https://id.erfgoed.net/besluiten/14941/bestanden/30240> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "833234 B" ;
+            rdf:value 833234 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_voorlopheffing_20200713_fotoregistratie.pdf" ;
+    dcterms:type [ dcterms:identifier 3 ;
+            dcterms:title "Bijlage" ] .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2020-08-19" a bibo:Issue ;
+    dcterms:isPartOf [ a bibo:Periodical ;
+            dcterms:title "Belgisch Staatsblad"@nl ] ;
+    dcterms:issued "2020-08-19"^^xsd:date ;
+    bibo:issue 235 ;
+    bibo:volume 190 .
+

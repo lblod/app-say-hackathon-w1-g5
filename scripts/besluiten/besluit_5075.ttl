@@ -1,0 +1,64 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oe: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix oslo: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/5075> a oslo:Besluit,
+        oe:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/5075/bestanden/13402> ;
+    dcterms:identifier 5075 ;
+    dcterms:publisher [ a foaf:Person ;
+            dcterms:identifier "4" ;
+            foaf:name "Bourgeois, Geert"@und ] ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" ;
+    dcterms:spatial [ a skos:Concept ;
+            dcterms:identifier 20001 ;
+            skos:prefLabel "Vlaams-Brabant"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 30000 ;
+            skos:prefLabel "West-Vlaanderen"@nl ] ;
+    dcterms:title "Vedetten van de Rijnvloot, P902 LIBERATION, P901 LEIE, P904 SAMBRE" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote [ a prov1:Publish ;
+            prov1:startedAtTime "2016-05-26T15:30:48.711702+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/1163" ],
+        [ a prov1:Create ;
+            prov1:startedAtTime "2013-09-30T12:52:20.963501+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/1763" ],
+        [ a prov1:Modify ;
+            prov1:startedAtTime "2020-07-23T10:09:12.662730+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2163" ] ;
+    skos:editorialNote ""@nl ;
+    oe:besluit_handeltOver [ a oe:Aanduidingsobject ;
+            oe:aanduid_aanduidingstype <https://id.erfgoed.net/thesauri/aanduidingstypes/5> ] ;
+    oe:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/9> ;
+    oe:dateSigned "2012-11-19"^^xsd:date ;
+    oe:follows <https://id.erfgoed.net/besluiten/10883> ;
+    oe:precedes <https://id.erfgoed.net/besluiten/14941> ;
+    oe:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/13> .
+
+<https://id.erfgoed.net/besluiten/5075/bestanden/13402> a bibo:LegalDocument,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "812631 B" ;
+            rdf:value 812631 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075.pdf" ;
+    dcterms:type [ dcterms:identifier 1 ;
+            dcterms:title "Besluit" ] .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2012-12-19" a bibo:Issue ;
+    dcterms:isPartOf [ a bibo:Periodical ;
+            dcterms:title "Belgisch Staatsblad"@nl ] ;
+    dcterms:issued "2012-12-19"^^xsd:date ;
+    bibo:issue 400 ;
+    bibo:volume 182 .
+

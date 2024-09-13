@@ -1,0 +1,83 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oe: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix oslo: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/14472> a oslo:Besluit,
+        oe:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/14472/bestanden/17390>,
+        <https://id.erfgoed.net/besluiten/14472/bestanden/17428> ;
+    dcterms:identifier 14472 ;
+    dcterms:publisher [ a foaf:Person ;
+            dcterms:identifier "4" ;
+            foaf:name "Bourgeois, Geert"@und ] ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2017-07-10" ;
+    dcterms:spatial [ a skos:Concept ;
+            dcterms:identifier 40000 ;
+            skos:prefLabel "Oost-Vlaanderen"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 10000 ;
+            skos:prefLabel "Antwerpen"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 30000 ;
+            skos:prefLabel "West-Vlaanderen"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 20001 ;
+            skos:prefLabel "Vlaams-Brabant"@nl ],
+        [ a skos:Concept ;
+            dcterms:identifier 70000 ;
+            skos:prefLabel "Limburg"@nl ] ;
+    dcterms:title "Vaststelling inventaris varend erfgoed" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote [ a prov1:Modify ;
+            prov1:startedAtTime "2017-08-16T09:51:10.736331+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/1163" ],
+        [ a prov1:Publish ;
+            prov1:startedAtTime "2017-06-26T08:28:02.886936+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/1163" ],
+        [ a prov1:Create ;
+            prov1:startedAtTime "2017-06-22T13:26:49.505827+02:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/1163" ] ;
+    skos:editorialNote ""@nl ;
+    oe:besluit_handeltOver [ a oe:Aanduidingsobject ;
+            oe:aanduid_aanduidingstype <https://id.erfgoed.net/thesauri/aanduidingstypes/14> ] ;
+    oe:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/9> ;
+    oe:dateSigned "2017-06-16"^^xsd:date ;
+    oe:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/88> .
+
+<https://id.erfgoed.net/besluiten/14472/bestanden/17390> a bibo:LegalDocument,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "634195 B" ;
+            rdf:value 634195 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "MB_bijlage2.pdf" ;
+    dcterms:type [ dcterms:identifier 1 ;
+            dcterms:title "Besluit" ] .
+
+<https://id.erfgoed.net/besluiten/14472/bestanden/17428> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "9074061 B" ;
+            rdf:value 9074061 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/zip" ] ;
+    dcterms:title "Digitaal beveiligd bestand varend - ondertekend.zip" ;
+    dcterms:type [ dcterms:identifier 3 ;
+            dcterms:title "Bijlage" ] .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2017-07-10" a bibo:Issue ;
+    dcterms:isPartOf [ a bibo:Periodical ;
+            dcterms:title "Belgisch Staatsblad"@nl ] ;
+    dcterms:issued "2017-07-10"^^xsd:date ;
+    bibo:issue 175 ;
+    bibo:volume 187 .
+
