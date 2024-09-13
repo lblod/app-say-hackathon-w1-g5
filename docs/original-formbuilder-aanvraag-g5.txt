@@ -1,0 +1,57 @@
+@prefix : <#>.
+@prefix form: <http://lblod.data.gift/vocabularies/forms/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix displayTypes: <http://lblod.data.gift/display-types/>.
+@prefix nodes: <http://data.lblod.info/form-data/nodes/>.
+@prefix emb: <http://ember-submission-form-fields/>.
+@prefix ex: <https://inventaris.onroerenderfgoed.be/#>.
+
+nodes:24289e48-258f-4919-8c3e-5783a6acb4a4
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Beschrijf behandeling";
+    sh:order 3;
+    sh:path ex:beschrijvingHandeling.
+nodes:848ecf41-e80f-4fdd-a37c-b0e182e03c6d
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:help "Een goed beargumenteerde motivering.";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Geef een motivatie op";
+    sh:order 5;
+    sh:path ex:motivatie.
+nodes:85bc9d49-8c54-4aea-9ea9-4b5cd5e1f1a8
+    a form:Field;
+    form:displayType displayTypes:date;
+    form:help "Wanneer starten de werken?";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Start werken";
+    sh:order 6;
+    sh:path ex:startDate.
+nodes:b4b10fe6-b896-4c1a-a533-1477f4ba6d13
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Naam aanvrager";
+    sh:order 2;
+    sh:path ( ex:aanvrager ex:voornaam ).
+nodes:bf9db3eb-c1fb-4603-889b-32485059653f
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:help "Gelieve de huidige staat uitvoerig te beschrijven.";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Beschrijf huidige staat";
+    sh:order 4;
+    sh:path ex:beschrijvingHuidigeStaat.
+nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1
+a form:Section; sh:name "Sectie"; sh:order 1 .
+emb:source-node
+    a form:Form, form:TopLevelForm;
+    form:includes
+        nodes:24289e48-258f-4919-8c3e-5783a6acb4a4,
+        nodes:848ecf41-e80f-4fdd-a37c-b0e182e03c6d,
+        nodes:85bc9d49-8c54-4aea-9ea9-4b5cd5e1f1a8,
+        nodes:b4b10fe6-b896-4c1a-a533-1477f4ba6d13,
+        nodes:bf9db3eb-c1fb-4603-889b-32485059653f;
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1 .
