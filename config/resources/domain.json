@@ -4,7 +4,9 @@
     "foaf": "http://xmlns.com/foaf/0.1/",
     "dcterms": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "ex": "https://inventaris.onroerenderfgoed.be/"
+    "ex": "https://inventaris.onroerenderfgoed.be/",
+    "besluit": "http://data.vlaanderen.be/ns/besluit#",
+    "erfgoed": "https://id.erfgoed.net/vocab/ontology#"
   },
   "resources": {
     "person": {
@@ -114,6 +116,20 @@
         "gemeente": { "type": "string", "predicate": "ex:gemeente" },
         "telefoon": { "type": "string", "predicate": "ex:telefoon" },
         "email": { "type": "string", "predicate": "ex:email" }
+      },
+      "relationships": [],
+      "features": ["include-uri"],
+      "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
+    },
+    "besluiten": {
+      "class": "besluit:Besluit",
+      "attributes": {
+        "hasPart": { "type": "string", "predicate": "dcterms:hasPart" },
+        "source": { "type": "string", "predicate": "dcterms:source" },
+        "identifier": { "type": "number", "predicate": "dcterms:identifier" },
+        "follows": { "type": "string", "predicate": "erfgoed:follows" },
+        "precedes": { "type": "string", "predicate": "erfgoed:precedes" },
+        "rechtsgevolgen": { "type": "string", "predicate": "erfgoed:rechtsgevolgen" }
       },
       "relationships": [],
       "features": ["include-uri"],
