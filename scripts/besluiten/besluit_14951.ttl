@@ -1,0 +1,82 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oe: <https://id.erfgoed.net/vocab/ontology#> .
+@prefix oslo: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.erfgoed.net/besluiten/14951> a oslo:Besluit,
+        oe:Besluit ;
+    dcterms:hasPart <https://id.erfgoed.net/besluiten/14951/bestanden/30353>,
+        <https://id.erfgoed.net/besluiten/14951/bestanden/30354>,
+        <https://id.erfgoed.net/besluiten/14951/bestanden/30355> ;
+    dcterms:identifier 14951 ;
+    dcterms:publisher [ a foaf:Person ;
+            dcterms:identifier "66" ;
+            foaf:name "Diependaele, Matthias"@und ] ;
+    dcterms:source "http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2020-11-17" ;
+    dcterms:title "Rijnvedette P904 Sambre" ;
+    void:inDataset <https://id.erfgoed.net/datasets/besluiten> ;
+    skos:changeNote [ a prov1:Create ;
+            prov1:startedAtTime "2020-10-30T11:26:30.250788+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2163" ],
+        [ a prov1:Modify ;
+            prov1:startedAtTime "2021-01-05T15:10:26.644536+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ],
+        [ a prov1:Publish ;
+            prov1:startedAtTime "2020-11-03T11:39:37.473422+01:00"^^xsd:dateTime ;
+            prov1:wasAssociatedWith "https://id.erfgoed.net/actoren/2299" ] ;
+    skos:editorialNote "gedeeltelijke opheffing voorgaand besluit"@nl ;
+    oe:besluit_handeltOver [ a oe:Aanduidingsobject ;
+            oe:aanduid_aanduidingstype <https://id.erfgoed.net/thesauri/aanduidingstypes/5> ] ;
+    oe:besluit_uitgevaardigdAls <https://id.erfgoed.net/thesauri/besluittypes/9> ;
+    oe:dateBetekend "2020-10-28"^^xsd:date ;
+    oe:dateSigned "2020-10-28"^^xsd:date ;
+    oe:follows <https://id.erfgoed.net/besluiten/14941> ;
+    oe:rechtsgevolgen <https://id.erfgoed.net/thesauri/besluittypes/15> .
+
+<https://id.erfgoed.net/besluiten/14951/bestanden/30353> a bibo:LegalDocument,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "207738 B" ;
+            rdf:value 207738 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_opheffing_20201028_mb.pdf" ;
+    dcterms:type [ dcterms:identifier 1 ;
+            dcterms:title "Besluit" ] .
+
+<https://id.erfgoed.net/besluiten/14951/bestanden/30354> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "207913 B" ;
+            rdf:value 207913 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_opheffing_20201028_behandelingadviezenbezwaren.pdf" ;
+    dcterms:type [ dcterms:identifier 3 ;
+            dcterms:title "Bijlage" ] .
+
+<https://id.erfgoed.net/besluiten/14951/bestanden/30355> a bibo:Document,
+        oe:Attachment ;
+    dcterms:extent [ a dcterms:SizeOrDuration ;
+            rdfs:label "819943 B" ;
+            rdf:value 819943 ] ;
+    dcterms:format [ a dcterms:MediaType ;
+            rdf:value "application/pdf" ] ;
+    dcterms:title "5075_opheffing_20201028_fotoregistratie.pdf" ;
+    dcterms:type [ dcterms:identifier 3 ;
+            dcterms:title "Bijlage" ] .
+
+"http://www.ejustice.just.fgov.be/cgi/summary_body.pl?language=nl&pub_date=2020-11-17" a bibo:Issue ;
+    dcterms:isPartOf [ a bibo:Periodical ;
+            dcterms:title "Belgisch Staatsblad"@nl ] ;
+    dcterms:issued "2020-11-17"^^xsd:date ;
+    bibo:issue 323 ;
+    bibo:volume 190 .
+
