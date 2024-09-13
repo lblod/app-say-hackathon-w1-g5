@@ -2,8 +2,9 @@
 import sys
 import itertools
 from rdflib import Graph, Namespace
-from rdflib.namespace import SKOS, DCTERMS, FOAF, XSD, RDFS
+from rdflib.namespace import SKOS, DCTERMS, FOAF, XSD, RDF, RDFS
 from rdflib.term import Node, URIRef, BNode, Literal
+import uuid
 
 MU = Namespace('http://mu.semte.ch/vocabularies/core/')
 EX = Namespace('https://inventaris.onroerenderfgoed.be/')
@@ -34,6 +35,10 @@ if __name__ == "__main__":
     g.bind('at', AT)
 
     for triple in g_src:
-        g.add(tuple(blank2named(node) for node in triple))
+        s, p, o = tuple(blank2named(node) for node in triple)
+        if p == RDF.type:
+            random_uuid = str(uuid.uuid4())
+            g.add((s, MU.uuid, Literal(random_uuid)))
+        g.add((s, p, o))
 
     g.serialize(destination=sys.argv[2])
