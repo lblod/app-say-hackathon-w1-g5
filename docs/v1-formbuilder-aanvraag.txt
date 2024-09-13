@@ -1,0 +1,141 @@
+@prefix : <#>.
+@prefix form: <http://lblod.data.gift/vocabularies/forms/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix displayTypes: <http://lblod.data.gift/display-types/>.
+@prefix nodes: <http://data.lblod.info/form-data/nodes/>.
+@prefix emb: <http://ember-submission-form-fields/>.
+@prefix ex: <https://inventaris.onroerenderfgoed.be/#>.
+
+nodes:05ba7737-ba5c-45fd-89d6-51e49d89d165
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Rijksgregisternummer van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Rijksregisternummer";
+    sh:order 3;
+    sh:path ex:rijksregisternummer.
+nodes:24289e48-258f-4919-8c3e-5783a6acb4a4
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Beschrijf behandeling";
+    sh:order 11;
+    sh:path ex:beschrijvingHandeling.
+nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb
+    a form:Section;
+    form:help "Aanvrager van de werken";
+    sh:name "Aanvrager";
+    sh:order 1 .
+nodes:524d71e3-5326-47f4-b1e5-e4e7d76ac722
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Email van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Email";
+    sh:order 8;
+    sh:path ex:email.
+nodes:6e2a5a31-9654-4e03-87f0-04917b5ee2ae
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Telefoonnummer van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb, ex:telefoon;
+    sh:name "Telefoonnummer";
+    sh:order 7;
+    sh:path nodes:1014eb62-e755-427e-af69-72cd77589ce0 .
+nodes:848ecf41-e80f-4fdd-a37c-b0e182e03c6d
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:help "Een goed beargumenteerde motivering.";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Geef een motivatie op";
+    sh:order 13;
+    sh:path ex:motivatie.
+nodes:85bc9d49-8c54-4aea-9ea9-4b5cd5e1f1a8
+    a form:Field;
+    form:displayType displayTypes:date;
+    form:help "Wanneer starten de werken?";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Start werken";
+    sh:order 14;
+    sh:path ex:startDate.
+nodes:8e6bfa4d-c80a-4601-81a3-43269cc1ac33
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help
+        "Naam van de organisatie of bedrijf waarvoor de werken worden uitgevoerd (indien toepasbaar)";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Organisatie";
+    sh:order 10;
+    sh:path ex:organisatie.
+nodes:97382550-7e4a-457a-b28a-c45703c5c221
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Postnummer van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Postnummer";
+    sh:order 5;
+    sh:path ex:postnummer.
+nodes:b20f60cb-ac9a-43c6-8582-ed25d0bda94f
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help
+        "Functie van de aanvrager binnen de organisatie of bedrijf (indien toepasbaar)";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Functie binnen de organisatie";
+    sh:order 9;
+    sh:path ex:functieInOrganisatie.
+nodes:b4b10fe6-b896-4c1a-a533-1477f4ba6d13
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Naam aanvrager";
+    sh:order 2;
+    sh:path ( ex:aanvrager ex:voornaam ).
+nodes:bf9db3eb-c1fb-4603-889b-32485059653f
+    a form:Field;
+    form:displayType displayTypes:textArea;
+    form:help "Gelieve de huidige staat uitvoerig te beschrijven.";
+    form:partOf nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1;
+    sh:name "Beschrijf huidige staat";
+    sh:order 12;
+    sh:path ex:beschrijvingHuidigeStaat.
+nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1
+    a form:Section;
+    form:help "Aanvraag voor werken aan beschermd gebouw of monument";
+    sh:name "Aanvraag";
+    sh:order 2 .
+nodes:d8033bda-93ad-4188-821a-f294722295d1
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Gemeente van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb, ex:gemeente;
+    sh:name "Gemeente";
+    sh:order 6;
+    sh:path nodes:b13bfb15-fd4c-48b0-99fd-cd344ad50ab9 .
+nodes:e7c45f3e-14a1-4225-99a8-76db3bb03f4f
+    a form:Field;
+    form:displayType displayTypes:defaultInput;
+    form:help "Straat en nummer van de aanvrager";
+    form:partOf nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb;
+    sh:name "Straat en nummer";
+    sh:order 4;
+    sh:path ex:straat.
+emb:source-node
+    a form:Form, form:TopLevelForm;
+    form:includes
+        nodes:05ba7737-ba5c-45fd-89d6-51e49d89d165,
+        nodes:24289e48-258f-4919-8c3e-5783a6acb4a4,
+        nodes:524d71e3-5326-47f4-b1e5-e4e7d76ac722,
+        nodes:6e2a5a31-9654-4e03-87f0-04917b5ee2ae,
+        nodes:848ecf41-e80f-4fdd-a37c-b0e182e03c6d,
+        nodes:85bc9d49-8c54-4aea-9ea9-4b5cd5e1f1a8,
+        nodes:8e6bfa4d-c80a-4601-81a3-43269cc1ac33,
+        nodes:97382550-7e4a-457a-b28a-c45703c5c221,
+        nodes:b20f60cb-ac9a-43c6-8582-ed25d0bda94f,
+        nodes:b4b10fe6-b896-4c1a-a533-1477f4ba6d13,
+        nodes:bf9db3eb-c1fb-4603-889b-32485059653f,
+        nodes:d8033bda-93ad-4188-821a-f294722295d1,
+        nodes:e7c45f3e-14a1-4225-99a8-76db3bb03f4f;
+    form:partOf
+        nodes:4572fa3b-fd87-4177-af34-7dfce8baeecb,
+        nodes:d7b33768-3723-4291-a7be-3d8a7d7cdbc1 .
