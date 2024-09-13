@@ -78,7 +78,13 @@
         "aanvrager": { "type": "string", "predicate": "ex:aanvrager" },
         "contactpersoon": { "type": "string", "predicate": "ex:contactpersoon" }
       },
-      "relationships": [],
+      "relationships": {
+        "aanduidingsobject": {
+          "target": "aanduidingsobject",
+          "predicate": "ex:detailsAanduidingsobject",
+          "cardinality": "one"
+        }
+      },
       "features": ["include-uri"],
       "new-resource-base": "https://inventaris.onroerenderfgoed.be/"
     },
